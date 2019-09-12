@@ -1,0 +1,373 @@
+/* ========================
+  Basic Styles
+==========================*/
+
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+h1 {
+  font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  font-size:1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue {
+	color: #185875;
+}
+
+.searchSection {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  padding-top: 4%;
+}
+
+.search-field {
+  width: 150px;
+  margin-right: 20px;
+  height: 20px;
+  font-size: 14px;
+  padding-left: 4px;
+  color: #aaa;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.redirect-bank-btn {
+  border-radius: 4px;
+  width: 130px;
+  color: #ccc;
+  height: 25px;
+  background: #607D8B;
+}
+
+/* ========================
+  Table Styles
+==========================*/
+.container th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #f4f4f4eb;
+}
+
+.container td {
+	font-weight: normal;
+	font-size: 0.9em;
+  width: -webkit-fill-available;
+	-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	-moz-box-shadow: 0 2px 2px -2px #0E1119;
+	box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 0 0;
+}
+
+.container td, .container th {
+  padding: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	background-color: #2C3446;
+}
+
+.container th {
+	background-color: #1F2739;
+}
+
+.container td:first-child {
+	color: #FB667A;
+}
+
+.container tr:hover {
+	background-color: #464A52;
+	-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	-moz-box-shadow: 0 6px 6px -6px #0E1119;
+	box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.pagination {
+  flex-shrink: 0;
+  text-align: center;
+  height: 120px;
+  position: relative;
+  top: 50px;
+}
+
+.pag-btn,
+.button-next,
+.button-before {
+	height: 15px;
+  border: 1px solid #9E9E9E;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.emptystate {
+  background: transparent !important;
+}
+
+.emptystate-h {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20%;
+}
+
+/* ========================
+  listdata Queries
+==========================*/
+
+.listdata {
+  display: block;
+  width: 65%;
+  margin: 5% auto;
+}
+
+.ld-header {
+  display: -webkit-box;
+}
+
+.ld-leftarrow,
+.ld-heading {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.ld-heading {
+  margin-left: 1em;
+}
+
+.ld-container,
+.ld-row {
+  display: grid;
+}
+
+.ld-gridview {
+  display: inline-flex;
+}
+
+.ld-container {
+  width: 30%;
+}
+
+.ld-cell-h {
+  padding: 15px 0px;
+  color: #ddd;
+  font-weight: 500;
+}
+
+.ld-cell {
+  padding: 15px 0px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* ========================
+  Media Queries
+==========================*/
+
+@media only screen and (min-width: 760px)  {
+	.mobile-hide {
+		display: table-cell !important;
+	}
+	.mobile-show {
+		display: none !important;
+	}
+}
+
+@media (max-width: 800px) {
+	.container td:nth-child(4),
+	.container th:nth-child(4) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 760px)  {
+	body {
+		padding: 0;
+	}
+
+	.mobile-show {
+		display: block !important;
+	}
+
+	.mobile-hide {
+		display: none !important;
+	}
+
+	#table {
+		display: block;
+		margin: 44px 0 0 0;
+	}
+
+	.caption {
+		position: fixed;
+		top: 0;
+		text-align: center;
+		height: 44px;
+		line-height: 44px;
+		z-index: 5;
+		border-bottom: 2px solid #999;
+	}
+
+	.row {
+		position: relative;
+		display: block;
+		border-bottom: 1px solid #ccc;
+
+	}
+
+	.header-row {
+		display: none;
+	}
+
+	.cell {
+		display: block;
+		border: none;
+		position: relative;
+    min-height: 45px;
+		line-height: 25px;
+		text-align: left;
+	}
+
+	.primary:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right:20px;
+		top:18px;
+		z-index: 2;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-right:10px solid #ccc;
+
+	}
+
+	.cell:nth-of-type(n+2) {
+		display: none;
+	}
+
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		width: 99%;
+		height: 100%;
+		opacity: 0;
+	}
+
+  input[type="radio"]:checked,
+	input[type="checkbox"]:checked {
+	  z-index: -1;
+	}
+
+	input[type="radio"]:checked ~ .cell,
+	input[type="checkbox"]:checked ~ .cell {
+		display: block;
+
+		border-bottom: 1px solid #eee;
+	}
+
+	input[type="radio"]:checked ~ .cell:nth-of-type(n+2),
+	input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2) {
+
+		background: #e0e0e0;
+	}
+
+	input[type="radio"]:checked ~ .cell:nth-of-type(n+2):before,
+	input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2):before {
+		content: attr(data-label);
+
+		display: inline-block;
+		width: 60px;
+		background: #999;
+		border-radius: 10px;
+		height: 20px;
+		margin-right: 10px;
+		font-size: 12px;
+		line-height: 20px;
+		text-align: center;
+		color: white;
+
+	}
+
+	input[type="radio"]:checked ~ .primary,
+	input[type="checkbox"]:checked ~ .primary  {
+		border-bottom: 2px solid #999;
+	}
+
+	input[type="radio"]:checked ~ .primary:after,
+	input[type="checkbox"]:checked ~ .primary:after {
+ 		position: absolute;
+		right:18px;
+		top:22px;
+		border-right: 10px solid transparent;
+		border-left: 10px solid transparent;
+		border-top:10px solid #ccc;
+		z-index: 2;
+	}
+
+  .searchSection {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .search-field,
+  .redirect-bank-btn {
+    margin: 6px 0px;
+  }
+
+  .searchSection,
+  .container {
+    width: 95%;
+  }
+
+  .container {
+    margin-top: 10%;
+  }
+}
